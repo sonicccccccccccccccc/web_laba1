@@ -35,3 +35,14 @@ echo "Сколько дней в среднем у мэг ушло на изуч
 echo "\n";
 //task 12
 echo 8**2;
+
+echo "\n";
+//task 13
+$my_num = 100;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+echo "\nОтвет: $answer";
