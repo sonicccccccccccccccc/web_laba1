@@ -31,3 +31,7 @@ $months = 11;
 $days = $months * 16;
 $days_per_language = $days/$num_languages;
 echo "Сколько дней в среднем у мэг ушло на изучение каждого языка? $days_per_language дня(дней) в среднем";
+
+echo "\n";
+//task 12
+echo 8**2;
