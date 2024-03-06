@@ -23,3 +23,11 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 $w = $last_month - $this_month;
 echo "\nНасколько больше я потратил в прошлом месяце, чем в этом месяце? На $w ";
+
+echo "\n";
+//task 11
+$num_languages = 4;
+$months = 11;
+$days = $months * 16;
+$days_per_language = $days/$num_languages;
+echo "Сколько дней в среднем у мэг ушло на изучение каждого языка? $days_per_language дня(дней) в среднем";
