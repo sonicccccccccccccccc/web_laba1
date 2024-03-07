@@ -122,3 +122,12 @@ while ($sum<=10){
     $zer += 1;
 }
 echo"\nЧтобы сумма была больше 10, нужно сложить $zer первых чисел";
+
+echo"\n";
+//task 15
+function printStringReturnNumber($string): int {
+    echo "\n$string";
+    return 111;
+}
+$myNum = printStringReturnNumber("Строка:");
+echo "myNum = $myNum";
