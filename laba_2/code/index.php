@@ -286,3 +286,28 @@ while($zer<$ryadi){
     $st = $st."x";
     $zer +=1;
 }
+
+echo"\n";
+//task 20
+$mas20 = [17, 16, 15, 14, 13, 10];
+$average = array_sum($mas20) / count($mas20);
+echo $average;
+echo "\n";
+
+$one_before_100 = array_sum(range(1, 100));
+echo $one_before_100;
+echo "\n";
+
+$mas200 = [25, 144, 500, 52];
+$square_root = array_map('sqrt', $mas200);
+print_r($square_root);
+echo "\n";
+
+$alphabet = range('a', 'z');
+$num = range(1, 26);
+$alphabet_num = array_combine($alphabet, $num);
+print_r($alphabet_num);
+
+$string20 = '1234567890';
+$sum20 = array_sum(str_split($string20, 2));
+echo  $sum20;
