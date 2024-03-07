@@ -275,3 +275,14 @@ else echo"\nсумма цифр однозначная:$sum";
 $arr = [1,2,3];
 if (count($arr) == 3)
     echo"\nСумма элементов массива:",array_sum($arr);
+
+echo"\n";
+//task 19
+$ryadi = 20;
+$zer = 0;
+$st = "x";
+while($zer<$ryadi){
+    echo "\n",$st;
+    $st = $st."x";
+    $zer +=1;
+}
