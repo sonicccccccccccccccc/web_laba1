@@ -131,3 +131,49 @@ function printStringReturnNumber($string): int {
 }
 $myNum = printStringReturnNumber("Строка:");
 echo "myNum = $myNum";
+
+echo"\n";
+//task 16
+function increaseEnthusiasm($string): string {
+    return $string."!";
+}
+$mystr = increaseEnthusiasm("8952812");
+echo $mystr;
+echo "\n";
+function repeatThreeTimes($string): string{
+    return str_repeat($string, 3);
+}
+$mystr = repeatThreeTimes("8952812");
+echo $mystr;
+echo "\n", increaseEnthusiasm(repeatThreeTimes("8952812"));
+
+function cut($str, $length = 10)
+{
+    return substr($str, 0, $length);
+}
+echo "\n", cut("5200000052111", 10);
+
+function printMas($mas, $index = 0) {
+    if ($index < count($mas)) {
+        echo $mas[$index] . " ";
+        printMas($mas, $index + 1);
+    }
+}
+$mas2 = [1, 2, 3, 4, 5];
+echo"\n",printMas($mas2);
+
+function summacifr($int){
+    $sum = 0;
+    while ($int > 0)
+    {
+        $sum += $int % 10;
+        $int = (int)($int / 10);
+    }
+    if ($sum > 9)
+    {
+        return summacifr($sum);
+    }
+    return $sum;
+}
+$summ = summacifr(525252);
+echo "\n",$summ;
