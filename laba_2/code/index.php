@@ -66,7 +66,7 @@ echo"\n$sqrt";
 
 $mas = [4, 2, 5, 19, 13, 0, 10];
 $sum = 0;
-foreach ($mas as $val) {
+foreach ($mas as $val){
     $sum += $val ** 2;
 }
 
@@ -125,7 +125,7 @@ echo"\nЧтобы сумма была больше 10, нужно сложить
 
 echo"\n";
 //task 15
-function printStringReturnNumber($string): int {
+function printStringReturnNumber($string): int{
     echo "\n$string";
     return 111;
 }
@@ -134,7 +134,7 @@ echo "myNum = $myNum";
 
 echo"\n";
 //task 16
-function increaseEnthusiasm($string): string {
+function increaseEnthusiasm($string): string{
     return $string."!";
 }
 $mystr = increaseEnthusiasm("8952812");
@@ -147,14 +147,13 @@ $mystr = repeatThreeTimes("8952812");
 echo $mystr;
 echo "\n", increaseEnthusiasm(repeatThreeTimes("8952812"));
 
-function cut($str, $length = 10)
-{
+function cut($str, $length = 10){
     return substr($str, 0, $length);
 }
 echo "\n", cut("5200000052111", 10);
 
-function printMas($mas, $index = 0) {
-    if ($index < count($mas)) {
+function printMas($mas, $index = 0){
+    if ($index < count($mas)){
         echo $mas[$index] . " ";
         printMas($mas, $index + 1);
     }
@@ -164,16 +163,75 @@ echo"\n",printMas($mas2);
 
 function summacifr($int){
     $sum = 0;
-    while ($int > 0)
-    {
+    while ($int > 0){
         $sum += $int % 10;
         $int = (int)($int / 10);
     }
-    if ($sum > 9)
-    {
+    if ($sum > 9){
         return summacifr($sum);
     }
     return $sum;
 }
 $summ = summacifr(525252);
 echo "\n",$summ;
+
+echo "\n";
+//task 17
+function arrayFill($val, $qua){
+    $array = [];
+    for ($i = 0; $i < $qua; $i++){
+        $array[] = str_repeat($val, $i + 1);
+    }
+    return $array;
+}
+
+foreach (arrayFill("x", 5) as $g4) echo "\n$g4";
+
+$array =  [[1, 2, 3], [4, 5], [6]];
+function sum(array $mas): int{
+    $zer = 0;
+    foreach ($mas as $array){
+        foreach ($array as $chisl) {
+            $zer += $chisl;
+        }
+    }
+    return $zer;
+}
+echo"\nСумма элементов:",sum($array);
+
+$mas = [];
+$count = 1;
+for ($i = 0; $i < 3; $i++) {
+    $subArray = [];
+    for ($j = 0; $j < 3; $j++) {
+        $subArray[] = $count++;
+    }
+    $mas[] = $subArray;
+}
+foreach ($mas as $subArray){
+    echo "\n";
+    echo "[";
+    $lastIndex = count($subArray) - 1;
+    foreach ($subArray as $index => $value){
+        echo $value;
+        if ($index !== $lastIndex){
+            echo ", ";
+        }
+    }
+    echo "]";
+}
+
+$array = [2, 5, 3, 9];
+$result = ($array[0]*$array[1])+($array[2]*$array[3]);
+echo "\nРезультат сложения произведений:$result";
+
+$user = ['name'=>'Alexey','surname'=>'Eschenko','patronymic'=>'Andreevich'];
+echo "\nЭтот человек хочет зачёт: ", $user['surname'] . ' ' . $user['name'] . ' ' . $user['patronymic'];
+
+$date = ['year' => date('2004'), 'month' => date('05'), 'day' => date('21')];
+echo "\n",$date['year'] . '-' . $date['month'] . '-' . $date['day'];
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "\nКоличество элементов массива:",count($arr);
+echo"\n";
+echo"Последний и предпоследний:$arr[4],$arr[3]";
