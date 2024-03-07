@@ -235,3 +235,43 @@ $arr = ['a', 'b', 'c', 'd', 'e'];
 echo "\nКоличество элементов массива:",count($arr);
 echo"\n";
 echo"Последний и предпоследний:$arr[4],$arr[3]";
+
+echo"\n";
+//task 18
+function odinplusdva($int1, $int2){
+    if ($int1 + $int2 > 10)
+        return "Cумма двух чисел больше 10 - true";
+    else
+        return "Сумма двух чисел меньше 10 - false";
+}
+$int12 = odinplusdva(5, 2);
+echo"\n",$int12;
+
+function odinravnodva($int1, $int2){
+    if ($int1 == $int2)
+        return "Числа равны - true";
+    else
+        return "Числа разные - false";
+}
+$int121 = odinravnodva(5, 2);
+echo"\n",$int121;
+echo"\n";
+
+$test =0;
+if ($test == 0) echo 'верно';
+
+$age = 37;
+if ($age <10 or $age>99)
+    echo "Вам меньше 10 или больше 99 лет";
+else
+    $sum = 0;
+while ($age > 0){
+    $sum += $age % 10;
+    $age = (int)($age / 10);
+}
+if ($sum > 9) echo"\nсумма цифр двузначная:$sum";
+else echo"\nсумма цифр однозначная:$sum";
+
+$arr = [1,2,3];
+if (count($arr) == 3)
+    echo"\nСумма элементов массива:",array_sum($arr);
