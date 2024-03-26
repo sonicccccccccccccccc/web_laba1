@@ -46,11 +46,11 @@
             foreach ($categ as $category) {
                 $folder = "./categories/$category";
                 if (is_dir($folder)) {
-                    $files = scandir($folder);
+                    $files= scandir($folder);
                     foreach ($files as $file) {
-                        if ($file != '.' && $file != '..') {
-                            $content = file_get_contents("$folder/$file");
-                            $znach = explode("\n", $content);
+                        if ($file!= '.' && $file != '..') {
+                            $content= file_get_contents("$folder/$file");
+                            $znach= explode("\n", $content);
                             echo "<tbody>";
                             echo "<td>{$znach[0]}</td>";
                             echo "<td>$category</td>";
