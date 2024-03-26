@@ -1,31 +1,15 @@
 <?php
 session_start();
-if(isset($_SESSION['userData'])) {
-    echo '<ul>';
-    foreach ($_SESSION['userData'] as $key => $value) {
-        echo "<li>$key: $value</li>";
-    }
-    echo '</ul>';
+if ("POST" === $_SERVER["REQUEST_METHOD"]) {
+    $_SESSION["name"] = $_POST["name"];
+    $_SESSION["surname"] = $_POST["surname"];
+    $_SESSION["age"] = $_POST["age"];
 }
-else echo "No user data found!";
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Результат</title>
-</head>
-<body>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST["text"])) {
-        $text = $_POST["text"];
-        $word_count = str_word_count($text);
-        $char_count = strlen($text);
-        echo "<h2>Результат:</h2>";
-        echo "<p>Количество слов:$word_count</p>";
-        echo "<p>Количество символов:$char_count</p>";
-    }
+if (isset($_SESSION["name"]) && isset($_SESSION["surname"]) && isset($_SESSION["age"])) {
+    echo "Имя: " . $_SESSION["name"] . "<br>";
+    echo "Фамилия: " . $_SESSION["surname"] . "<br>";
+    echo "Возраст: " . $_SESSION["age"] . "<br>";
+} else {
+    echo "Данные о пользователе не найдены в сессии.";
 }
 ?>
-</body>
-</html>
