@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/411f26f3-a8c6-4c21-aeda-2be46390f755/console.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/laba_5/code/index.php" dialect="GenericSQL" />
+  </component>
+</project>
